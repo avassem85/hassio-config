@@ -23,22 +23,31 @@ homeassistant:
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+# Configure Home Assistant to use HTTPS
+http:
+  base_url: !secret HTTP_URL
+  ssl_certificate: !secret SSL_CERTIFICATE
+  ssl_key: !secret SSL_KEY
+  login_attempts_threshold: -1
+  ip_ban_enabled: false
 
-# Discover some devices automatically
-discovery:
+recorder:
+  db_url: !secret RECORDER_URL
 
-# Sensors
-sensor:
-  # Weather prediction
-  - platform: yr
-
-# Text to speech
-tts:
-  - platform: google_translate
+influxdb:
+  host: a0d7b954-influxdb
+  port: !secret INFLUX_PORT
+  database: !secret INFLUX_DATABASE
+  username: !secret INFLUX_USERNAME 
+  password: !secret INFLUX_PASSWORD
+  max_retries: 3
+  default_measurement: state
 
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+logger:
+  default: warning
+  logs:
+      homeassistant.components.influxdb: debug
