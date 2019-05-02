@@ -1,0 +1,28 @@
+homeassistant:
+  customize_glob:
+    sensor.disk_use_percent_:
+      friendly_name: NUC - Schijfruimmte gebruik
+    sensor.memory_use_percent:
+      friendly_name: NUC - Geheugen gebruik
+    sensor.processor_use:
+      friendly_name: NUC - Processor gebruik
+    sensor.last_boot:
+      friendly_name: NUC - Laatste opstart
+
+group:
+  raspberry_pi_system_monitor:
+    name: NUC
+    entities:
+      - sensor.disk_use_percent
+      - sensor.memory_use_percent
+      - sensor.processor_use
+      - sensor.last_boot
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: processor_use
+      - type: last_boot

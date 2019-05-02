@@ -19,6 +19,8 @@ homeassistant:
      trusted_networks:
       - !secret HTTP_TRUSTED_IP_INTERNAL
       - !secret HTTP_TRUSTED_IP_EXTERNAL
+  whitelist_external_dirs:
+    - !secret HA_CONFIGURATION_DIRECTORY
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:

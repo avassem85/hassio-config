@@ -1,0 +1,23 @@
+homeassistant:
+  customize_glob:
+    sensor.home_assistant_v2_db:
+      friendly_name: Home Asssistant - Bestanden - Database
+    sensor.home_assistant_log:
+      friendly_name: Home Asssistant - Bestanden - Logs
+    sensor.ozw_log_txt:
+      friendly_name: Home Asssistant - Bestanden - Zwave logs
+
+group:
+  filesizes:
+    name: Home Asssistant - Bestanden
+    entities:
+      - sensor.home_assistant_v2_db
+      - sensor.home_assistant_log
+      - sensor.ozw_log_txt
+
+sensor:
+  - platform: filesize
+    file_paths:
+        - !secret FILESIZE_HOMEASSISTANT_DB
+        - !secret FILESIZE_HOMEASSISTANT_LOG
+        # - !secret FILESIZE_ZWAVE_LOG

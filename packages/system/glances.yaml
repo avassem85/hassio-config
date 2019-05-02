@@ -1,0 +1,29 @@
+sensor:
+  - platform: glances
+    host: 127.0.0.1
+    port: 61208
+    ssl: true
+    verify_ssl: false
+    version: 3
+    resources:
+      - 'disk_use_percent'
+      - 'disk_use'
+      - 'disk_free'
+      - 'memory_use_percent'
+      - 'memory_use'
+      - 'memory_free'
+      - 'swap_use_percent'
+      - 'swap_use'
+      - 'swap_free'
+      - 'processor_load'
+      - 'process_running'
+      - 'process_total'
+      - 'process_thread'
+      - 'process_sleeping'
+      - 'cpu_use_percent'
+      - 'cpu_temp'
+      - 'docker_active'
+      - 'docker_cpu_use'
+      - 'docker_memory_use'
+    username: !secret GLANCES_USERNAME
+    password: !secret GLANCES_PASSWORD
