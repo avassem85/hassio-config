@@ -1,0 +1,62 @@
+cloud:
+  google_actions:
+    filter:
+      include_entities:
+        - light.ambilight
+        - light.anavi_light_controller_3d_printer
+        - light.babykamer
+        - light.badkamer
+        - light.berging
+        - light.dimmer_keuken_level
+        - light.dimmer_stolplamp_level
+        - light.eetkamer
+        - light.gang_beneden
+        - light.gang_boven
+        - light.garderobe
+        - light.kantoor
+        - light.kinderkamer
+        - light.slaapkamer
+        - light.trapkast
+        - light.washok
+        - light.wc_beneden
+        - light.woonkamer
+    entity_config:
+      light.ambilight:
+        name: Ambilight
+      light.anavi_light_controller_3d_printer:
+        name: 3D Printer
+      light.babykamer:
+        name: Kamer Luuk
+      light.badkamer:
+        name: Badkamer
+      light.berging:
+        name: Berging
+      light.dimmer_keuken_level:
+        name: Keuken
+      light.dimmer_stolplamp_level:
+        name: Stolplamp
+        aliases:
+          - Sfeerlicht
+          - Sfeerlamp
+      light.eetkamer:
+        name: Eetkamer
+      light.gang_beneden:
+        name: Gang beneden
+      light.gang_boven:
+        name: Gang boven
+      light.garderobe:
+        name: Garderobe
+      light.kantoor:
+        name: Kantoor
+      light.kinderkamer:
+        name: Kamer Elise
+      light.slaapkamer:
+        name: Slaapkamer
+      light.trapkast:
+        name: Trapkast
+      light.washok:
+        name: Washok
+      light.wc_beneden:
+        name: WC Beneden
+      light.woonkamer:
+        name: Woonkamer
