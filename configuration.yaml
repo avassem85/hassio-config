@@ -13,6 +13,12 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
   packages: !include_dir_named packages
+  auth_providers:
+   - type: homeassistant
+   - type: trusted_networks
+     trusted_networks:
+      - !secret HTTP_TRUSTED_IP_INTERNAL
+      - !secret HTTP_TRUSTED_IP_EXTERNAL
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
