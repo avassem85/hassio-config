@@ -1,0 +1,4 @@
+sensor:
+  - platform: version
+    source: hassio
+    image: intel-nuc
