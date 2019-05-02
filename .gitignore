@@ -5,7 +5,7 @@
 # You can whitelist files/folders with !, these will not be ignored.
 !.gitignore
 !*.yaml
-!packages/
+!*/
 !*.md
 !gitupdate.sh
 !.travis.yml
