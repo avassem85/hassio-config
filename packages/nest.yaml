@@ -1,0 +1,78 @@
+homeassistant:
+  customize_glob:
+    binary_sensor.*_online:
+      hidden: true
+    binary_sensor.*_activity*:
+      hidden: true
+    climate.woonkamer:
+      friendly_name: Woonkamer - Nest
+    sensor.woonkamer_thermostat_temperature:
+      friendly_name: Woonkamer - Temperatuur
+    sensor.woonkamer_thermostat_humidity:
+      friendly_name: Woonkamer - Luchtvochtigheid
+    sensor.woonkamer_thermostat_target:
+      friendly_name: Woonkamer - Nest - Doel
+    sensor.woonkamer_thermostat_hvac_state:
+      friendly_name: Woonkamer - Nest - Status
+    sensor.woonkamer_thermostat_operation_mode:
+      friendly_name: Woonkamer - Nest - Modus
+    binary_sensor.woonkamer_thermostat_fan:
+      hidden: true
+    binary_sensor.woonkamer_thermostat_has_leaf:
+      friendly_name: Woonkamer - Nest - Zuinig
+    binary_sensor.woonkamer_thermostat_is_locked:
+      hidden: true
+    binary_sensor.woonkamer_thermostat_is_using_emergency_heat:
+      hidden: true
+    binary_sensor.thuis_away:
+      friendly_name: Woonkamer - Nest - Afwezigheid
+    sensor.thuis_eta:
+      hidden: true
+    sensor.thuis_security_state:
+      hidden: true
+
+group:
+  nest_devices:
+    name: Nest Devices
+    entities:
+      - group.slaapkamer_camera_elise
+      - group.slaapkamer_camera_luuk
+      - group.woonkamer_thermostat
+      - binary_sensor.thuis_away
+      - sensor.thuis_eta
+      - sensor.thuis_security_state
+  slaapkamer_camera_elise:
+    name: Nest Cam IQ Indoor - Elise
+    entities:
+      - binary_sensor.slaapkamer_camera_elise_online
+      - camera.slaapkamer_elise
+      - binary_sensor.slaapkamer_camera_elise_person_detected
+      - binary_sensor.slaapkamer_camera_elise_sound_detected
+      - binary_sensor.slaapkamer_camera_elise_motion_detected
+  slaapkamer_camera_luuk:
+    name: Nest Cam IQ Indoor - Luuk
+    entities:
+      - binary_sensor.slaapkamer_camera_luuk_online
+      - camera.slaapkamer_luuk
+      - binary_sensor.slaapkamer_camera_luuk_person_detected
+      - binary_sensor.slaapkamer_camera_luuk_sound_detected
+      - binary_sensor.slaapkamer_camera_luuk_motion_detected
+      - binary_sensor.slaapkamer_camera_luuk_ledikant_activity
+  woonkamer_thermostat:
+    name: Nest Learning Thermostat - Woonkamer
+    entities:
+      - binary_sensor.woonkamer_thermostat_online
+      - climate.woonkamer
+      - sensor.woonkamer_thermostat_humidity
+      - sensor.woonkamer_thermostat_target
+      - sensor.woonkamer_thermostat_temperature
+      - sensor.woonkamer_thermostat_hvac_state
+      - sensor.woonkamer_thermostat_operation_mode
+      - binary_sensor.woonkamer_thermostat_fan
+      - binary_sensor.woonkamer_thermostat_has_leaf
+      - binary_sensor.woonkamer_thermostat_is_locked
+      - binary_sensor.woonkamer_thermostat_is_using_emergency_heat
+
+nest:
+  client_id: !secret NEST_CLIENT_ID
+  client_secret: !secret NEST_CLIENT_SECRET

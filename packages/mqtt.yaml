@@ -1,0 +1,13 @@
+mqtt:
+  broker: a0d7b954-mqtt
+  username: !secret MQTT_USERNAME
+  password: !secret MQTT_PASSWORD
+  discovery: true
+  discovery_prefix: homeassistant
+  client_id: mqtt-home-assistant
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
