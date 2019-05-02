@@ -1,0 +1,136 @@
+homeassistant:
+  customize_glob:
+    light.kinderkamer:
+      friendly_name: "Slaapkamer Elise - Verlichting"
+    light.kinderkamer_1:
+      friendly_name: "Slaapkamer Elise - Lamp #1"
+    light.kinderkamer_2:
+      friendly_name: "Slaapkamer Elise - Lamp #2"
+    light.kinderkamer_3:
+      friendly_name: "Slaapkamer Elise - Lamp #3"
+    light.babykamer:
+      friendly_name: "Slaapkamer Luuk - Verlichting"
+    light.babykamer_1:
+      friendly_name: "Slaapkamer Luuk - Lamp #1"
+    light.babykamer_2:
+      friendly_name: "Slaapkamer Luuk - Lamp #2"
+    light.babykamer_3:
+      friendly_name: "Slaapkamer Luuk - Lamp #3"
+    light.slaapkamer:
+      friendly_name: "Slaapkamer A & A - Verlichting"
+    light.slaapkamer_1:
+      friendly_name: "Slaapkamer A & A - Lamp #1"
+    light.slaapkamer_2:
+      friendly_name: "Slaapkamer A & A - Lamp #2"
+    light.slaapkamer_3:
+      friendly_name: "Slaapkamer A & A - Lamp #3"
+    light.woonkamer:
+      friendly_name: "Woonkamer - Verlichting"
+    light.woonkamer_1:
+      friendly_name: "Woonkamer - Lamp #1"
+    light.woonkamer_2:
+      friendly_name: "Woonkamer - Lamp #2"
+    light.woonkamer_3:
+      friendly_name: "Woonkamer - Lamp #3"
+    light.trapkast:
+      friendly_name: "Trapkast - Verlichting"
+    light.trapkast_1:
+      friendly_name: "Trapkast - Lamp #1"
+    light.gang_boven:
+      friendly_name: "Gang boven - Verlichting"
+    light.gang_boven_1:
+      friendly_name: "Gang boven - Lamp #1"
+    light.wc_boven:
+      friendly_name: "WC boven - Verlichting"
+    light.wc_boven_1:
+      friendly_name: "WC boven - Lamp #1"
+    light.gang_beneden:
+      friendly_name: "Gang beneden - Verlichting"
+    light.gang_beneden_1:
+      friendly_name: "Gang beneden - Lamp #1"
+    light.washok:
+      friendly_name: "Washok - Verlichting"
+    light.washok_1:
+      friendly_name: "Washok - Lamp #1"
+    light.eetkamer:
+      friendly_name: "Eetkamer - Verlichting"
+    light.eetkamer_1:
+      friendly_name: "Eetkamer - Lamp #1"
+    light.eetkamer_2:
+      friendly_name: "Eetkamer - Lamp #2"
+    light.badkamer:
+      friendly_name: "Badkamer - Verlichting"
+    light.badkamer_1:
+      friendly_name: "Badkamer - Lamp #1"
+
+group:
+  hue_kinderkamer_elise:
+    name: Hue Devices - Kamer Elise
+    entities:
+      - light.kinderkamer
+      - light.kinderkamer_1
+      - light.kinderkamer_2
+      - light.kinderkamer_3
+  hue_babykamer_luuk:
+    name: Hue Devices - Kamer Luuk
+    entities:
+      - light.babykamer
+      - light.babykamer_1
+      - light.babykamer_2
+      - light.babykamer_3
+  hue_slaapkamer:
+    name: Hue Devices - Slaapkamer
+    entities:
+      - light.slaapkamer
+      - light.slaapkamer_1
+      - light.slaapkamer_2
+      - light.slaapkamer_3
+  hue_woonkamer:
+    name: Hue Devices - Woonkamer
+    entities:
+      - light.woonkamer
+      - light.woonkamer_1
+      - light.woonkamer_2
+      - light.woonkamer_3
+  hue_trapkast:
+    name: Hue Devices - Trapkast
+    entities:
+      - light.trapkast
+      - light.trapkast_1
+  hue_gang_boven:
+    name: Hue Devices - Gang boven
+    entities:
+      - light.gang_boven
+      - light.gang_boven_1
+  hue_wc_boven:
+    name: Hue Devices - WC boven
+    entities:
+      - light.wc_boven
+      - light.wc_boven_1
+  hue_gang_beneden:
+    name: Hue Devices - Gang beneden
+    entities:
+      - light.gang_beneden
+      - light.gang_beneden_1
+  hue_washok:
+    name: Hue Devices - Washok
+    entities:
+      - light.washok
+      - light.washok_1
+  hue_eetkamer:
+    name: Hue Devices - Eetkamer
+    entities:
+      - light.eetkamer
+      - light.eetkamer_1
+      - light.eetkamer_2
+  hue_badkamer:
+    name: Hue Devices - Badkamer
+    entities:
+      - light.badkamer
+      - light.badkamer_1
+
+hue:
+  bridges:
+    - host: !secret HUE_IP_ADDRESS
+      allow_unreachable: true
+      allow_hue_groups: true
