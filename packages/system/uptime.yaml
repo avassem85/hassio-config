@@ -1,0 +1,13 @@
+homeassistant:
+  customize_glob:
+    sensor.uptime:
+      friendly_name: Home Assistant - Uptime
+
+group:
+  ha:
+    name: Home Assistant
+    entities:
+      - sensor.uptime
+
+sensor:
+  - platform: uptime
