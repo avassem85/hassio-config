@@ -1,0 +1,55 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_wc_beneden_temperature:
+      friendly_name: "WC Beneden - Temperatuur"
+    sensor.temp_sensor_wc_beneden_humidity:
+      friendly_name: "WC Beneden - Luchtvochtigheid"
+    sensor.temp_sensor_wc_beneden_pressure:
+      friendly_name: "WC Beneden - Luchtdruk"
+    sensor.temp_sensor_wc_beneden_battery:
+      friendly_name: "WC Beneden - Temp Sensor - Batterij"
+    sensor.temp_sensor_wc_beneden_linkquality:
+      friendly_name: "WC Beneden - Temp Sensor - Link"
+    binary_sensor.motion_sensor_wc_beneden_occupancy:
+      friendly_name: "WC Beneden - Beweging"
+    sensor.motion_sensor_wc_beneden_illuminance:
+      friendly_name: "WC Beneden - Licht"
+    sensor.motion_sensor_wc_beneden_battery:
+      friendly_name: "WC Beneden - Motion Sensor - Batterij"
+    sensor.motion_sensor_wc_beneden_linkquality:
+      friendly_name: "WC Beneden - Motion Sensor - Link"
+    binary_sensor.door_sensor_wc_beneden_contact:
+      friendly_name: "WC Beneden - Deur"
+    sensor.door_sensor_wc_beneden_battery:
+      friendly_name: "WC Beneden - Door Sensor - Batterij"
+    sensor.door_sensor_wc_beneden_linkquality:
+      friendly_name: "WC Beneden - Door Sensor - Link"
+
+group:
+  xiaomi_devices_wc_beneden:
+    name: Xiaomi Devices - WC Beneden
+    entities:
+      - group.xiaomi_temp_sensor_wc_beneden
+      - group.xiaomi_motion_sensor_wc_beneden
+      - group.xiaomi_door_sensor_wc_beneden
+  xiaomi_temp_sensor_wc_beneden:
+    name: Temperature & Humidity Sensor - WC Beneden
+    entities:
+      - sensor.temp_sensor_wc_beneden_temperature
+      - sensor.temp_sensor_wc_beneden_humidity
+      - sensor.temp_sensor_wc_beneden_pressure
+      - sensor.temp_sensor_wc_beneden_battery
+      - sensor.temp_sensor_wc_beneden_linkquality
+  xiaomi_motion_sensor_wc_beneden:
+    name: Motion Sensor - WC Beneden
+    entities:
+      - binary_sensor.motion_sensor_wc_beneden_occupancy
+      - sensor.motion_sensor_wc_beneden_illuminance
+      - sensor.motion_sensor_wc_beneden_battery
+      - sensor.motion_sensor_wc_beneden_linkquality
+  xiaomi_door_sensor_wc_beneden:
+    name: Door Sensor - WC Beneden
+    entities:
+      - binary_sensor.door_sensor_wc_beneden_contact
+      - sensor.door_sensor_wc_beneden_battery
+      - sensor.door_sensor_wc_beneden_linkquality

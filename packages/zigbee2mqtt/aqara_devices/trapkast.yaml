@@ -1,0 +1,55 @@
+homeassistant:
+  customize_glob:
+    binary_sensor.motion_sensor_trapkast_occupancy:
+      friendly_name: "Trapkast - Beweging"
+    sensor.motion_sensor_trapkast_illuminance:
+      friendly_name: "Trapkast - Licht"
+    sensor.motion_sensor_trapkast_battery:
+      friendly_name: "Trapkast - Motion Sensor - Batterij"
+    sensor.motion_sensor_trapkast_linkquality:
+      friendly_name: "Trapkast - Motion Sensor - Link"
+    binary_sensor.door_sensor_trapkast_contact:
+      friendly_name: "Trapkast - Deur"
+    sensor.door_sensor_trapkast_battery:
+      friendly_name: "Trapkast - Door Sensor - Batterij"
+    sensor.door_sensor_trapkast_linkquality:
+      friendly_name: "Trapkast - Door Sensor - Link"
+    sensor.temp_sensor_trapkast_temperature:
+      friendly_name: "Trapkast - Temperatuur"
+    sensor.temp_sensor_trapkast_humidity:
+      friendly_name: "Trapkast - Luchtvochtigheid"
+    sensor.temp_sensor_trapkast_pressure:
+      friendly_name: "Trapkast - Luchtdruk"
+    sensor.temp_sensor_trapkast_battery:
+      friendly_name: "Trapkast - Temp Sensor - Batterij"
+    sensor.temp_sensor_trapkast_linkquality:
+      friendly_name: "Trapkast - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_trapkast:
+    name: Xiaomi Devices - Trapkast
+    entities:
+      - group.xiaomi_motion_sensor_trapkast
+      - group.xiaomi_door_sensor_trapkast
+      - group.xiaomi_temp_sensor_trapkast
+  xiaomi_motion_sensor_trapkast:
+    name: Motion Sensor - Trapkast
+    entities:
+      - binary_sensor.motion_sensor_trapkast_occupancy
+      - sensor.motion_sensor_trapkast_illuminance
+      - sensor.motion_sensor_trapkast_battery
+      - sensor.motion_sensor_trapkast_linkquality
+  xiaomi_door_sensor_trapkast:
+    name: Door Sensor - Trapkast
+    entities:
+      - binary_sensor.door_sensor_trapkast_contact
+      - sensor.door_sensor_trapkast_battery
+      - sensor.door_sensor_trapkast_linkquality
+  xiaomi_temp_sensor_trapkast:
+    name: Temperature & Humidity Sensor - Trapkast
+    entities:
+      - sensor.temp_sensor_trapkast_temperature
+      - sensor.temp_sensor_trapkast_humidity
+      - sensor.temp_sensor_trapkast_pressure
+      - sensor.temp_sensor_trapkast_battery
+      - sensor.temp_sensor_trapkast_linkquality

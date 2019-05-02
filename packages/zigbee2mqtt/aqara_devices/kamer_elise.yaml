@@ -1,0 +1,39 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_elise_temperature:
+      friendly_name: "Slaapkamer Elise - Temperatuur"
+    sensor.temp_sensor_elise_humidity:
+      friendly_name: "Slaapkamer Elise - Luchtvochtigheid"
+    sensor.temp_sensor_elise_pressure:
+      friendly_name: "Slaapkamer Elise - Luchtdruk"
+    sensor.temp_sensor_elise_battery:
+      friendly_name: "Slaapkamer Elise - Temp Sensor - Batterij"
+    sensor.temp_sensor_elise_linkquality:
+      friendly_name: "Slaapkamer Elise - Temp Sensor - Link"
+    binary_sensor.door_sensor_elise_contact:
+      friendly_name: "Slaapkamer Elise - Deur"
+    sensor.door_sensor_elise_battery:
+      friendly_name: "Slaapkamer Elise - Door Sensor - Batterij"
+    sensor.door_sensor_elise_linkquality:
+      friendly_name: "Slaapkamer Elise - Door Sensor - Link"
+
+group:
+  xiaomi_devices_slaapkamer_elise:
+    name: Xiaomi Devices - Slaapkamer Elise
+    entities:
+      - group.xiaomi_temp_sensor_slaapkamer_elise
+      - group.xiaomi_door_sensor_slaapkamer_elise
+  xiaomi_temp_sensor_slaapkamer_elise:
+    name: Temperature & Humidity Sensor - Slaapkamer Elise
+    entities:
+      - sensor.temp_sensor_elise_temperature
+      - sensor.temp_sensor_elise_humidity
+      - sensor.temp_sensor_elise_pressure
+      - sensor.temp_sensor_elise_battery
+      - sensor.temp_sensor_elise_linkquality
+  xiaomi_door_sensor_slaapkamer_elise:
+    name: Door Sensor - Slaapkamer Elise
+    entities:
+      - binary_sensor.door_sensor_elise_contact
+      - sensor.door_sensor_elise_battery
+      - sensor.door_sensor_elise_linkquality

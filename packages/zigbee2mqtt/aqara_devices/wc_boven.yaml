@@ -1,0 +1,55 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_wc_boven_temperature:
+      friendly_name: "WC Boven - Temperatuur"
+    sensor.temp_sensor_wc_boven_humidity:
+      friendly_name: "WC Boven - Luchtvochtigheid"
+    sensor.temp_sensor_wc_boven_pressure:
+      friendly_name: "WC Boven - Luchtdruk"
+    sensor.temp_sensor_wc_boven_battery:
+      friendly_name: "WC Boven - Temp Sensor - Batterij"
+    sensor.temp_sensor_wc_boven_linkquality:
+      friendly_name: "WC Boven - Temp Sensor - Link"
+    binary_sensor.door_sensor_wc_boven_contact:
+      friendly_name: "WC Boven - Deur"
+    sensor.door_sensor_wc_boven_battery:
+      friendly_name: "WC Boven - Door Sensor - Batterij"
+    sensor.door_sensor_wc_boven_linkquality:
+      friendly_name: "WC Boven - Door Sensor - Link"
+    binary_sensor.motion_sensor_wc_boven_occupancy:
+      friendly_name: "WC Boven - Beweging"
+    sensor.motion_sensor_wc_boven_illuminance:
+      friendly_name: "WC Boven - Licht"
+    sensor.motion_sensor_wc_boven_battery:
+      friendly_name: "WC Boven - Motion Sensor - Batterij"
+    sensor.motion_sensor_wc_boven_linkquality:
+      friendly_name: "WC Boven - Motion Sensor - Link"
+
+group:
+  xiaomi_devices_wc_boven:
+    name: Xiaomi Devices - WC Boven
+    entities:
+      - group.xiaomi_temp_sensor_wc_boven
+      - group.xiaomi_door_sensor_wc_boven
+      - group.xiaomi_motion_sensor_wc_boven
+  xiaomi_temp_sensor_wc_boven:
+    name: Temperature & Humidity Sensor - WC Boven
+    entities:
+      - sensor.temp_sensor_wc_boven_temperature
+      - sensor.temp_sensor_wc_boven_humidity
+      - sensor.temp_sensor_wc_boven_pressure
+      - sensor.temp_sensor_wc_boven_battery
+      - sensor.temp_sensor_wc_boven_linkquality
+  xiaomi_door_sensor_wc_boven:
+    name: Door Sensor - WC Boven
+    entities:
+      - binary_sensor.door_sensor_wc_boven_contact
+      - sensor.door_sensor_wc_boven_battery
+      - sensor.door_sensor_wc_boven_linkquality
+  xiaomi_motion_sensor_wc_boven:
+    name: Motion Sensor - WC Boven
+    entities:
+      - binary_sensor.motion_sensor_wc_boven_occupancy
+      - sensor.motion_sensor_wc_boven_illuminance
+      - sensor.motion_sensor_wc_boven_battery
+      - sensor.motion_sensor_wc_boven_linkquality

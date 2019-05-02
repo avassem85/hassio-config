@@ -1,0 +1,23 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_gang_boven_temperature:
+      friendly_name: "Gang boven - Temperatuur"
+    sensor.temp_sensor_gang_boven_humidity:
+      friendly_name: "Gang boven - Luchtvochtigheid"
+    sensor.temp_sensor_gang_boven_battery:
+      friendly_name: "Gang boven - Temp Sensor - Batterij"
+    sensor.temp_sensor_gang_boven_linkquality:
+      friendly_name: "Gang boven - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_gang_boven:
+    name: Xiaomi Devices - Gang boven
+    entities:
+      - group.xiaomi_temp_sensor_gang_boven
+  xiaomi_temp_sensor_gang_boven:
+    name: Temperature & Humidity Sensor - Gang boven
+    entities:
+      - sensor.temp_sensor_gang_boven_temperature
+      - sensor.temp_sensor_gang_boven_humidity
+      - sensor.temp_sensor_gang_boven_battery
+      - sensor.temp_sensor_gang_boven_linkquality

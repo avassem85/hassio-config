@@ -1,0 +1,68 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_berging_temperature:
+      friendly_name: "Berging - Temperatuur"
+    sensor.temp_sensor_berging_humidity:
+      friendly_name: "Berging - Luchtvochtigheid"
+    sensor.temp_sensor_berging_pressure:
+      friendly_name: "Berging - Luchtdruk"
+    sensor.temp_sensor_berging_battery:
+      friendly_name: "Berging - Temp Sensor - Batterij"
+    sensor.temp_sensor_berging_linkquality:
+      friendly_name: "Berging - Temp Sensor - Link"
+    binary_sensor.motion_sensor_berging_occupancy:
+      friendly_name: "Berging - Beweging"
+    sensor.motion_sensor_berging_illuminance:
+      friendly_name: "Berging - Licht"
+    sensor.motion_sensor_berging_battery:
+      friendly_name: "Berging - Motion Sensor - Batterij"
+    sensor.motion_sensor_berging_linkquality:
+      friendly_name: "Berging - Motion Sensor - Link"
+    binary_sensor.door_sensor_achterdeur_contact:
+      friendly_name: "Berging - Achterdeur"
+    sensor.door_sensor_achterdeur_battery:
+      friendly_name: "Achterdeur - Door Sensor - Batterij"
+    sensor.door_sensor_achterdeur_linkquality:
+      friendly_name: "Achterdeur - Door Sensor - Link"
+    binary_sensor.door_sensor_berging_contact:
+      friendly_name: "Berging - Deur"
+    sensor.door_sensor_berging_battery:
+      friendly_name: "Berging - Door Sensor - Batterij"
+    sensor.door_sensor_berging_linkquality:
+      friendly_name: "Berging - Door Sensor - Link"
+
+group:
+  xiaomi_devices_berging:
+    name: Xiaomi Devices - Berging
+    entities:
+      - group.xiaomi_temp_sensor_berging
+      - group.xiaomi_motion_sensor_berging
+      - group.xiaomi_door_sensor_achterdeur
+      - group.xiaomi_door_sensor_berging
+  xiaomi_temp_sensor_berging:
+    name: Temperature & Humidity Sensor - Berging
+    entities:
+      - sensor.temp_sensor_berging_temperature
+      - sensor.temp_sensor_berging_humidity
+      - sensor.temp_sensor_berging_pressure
+      - sensor.temp_sensor_berging_battery
+      - sensor.temp_sensor_berging_linkquality
+  xiaomi_motion_sensor_berging:
+    name: Motion Sensor - Berging
+    entities:
+      - binary_sensor.motion_sensor_berging_occupancy
+      - sensor.motion_sensor_berging_illuminance
+      - sensor.motion_sensor_berging_battery
+      - sensor.motion_sensor_berging_linkquality
+  xiaomi_door_sensor_achterdeur:
+    name: Door Sensor - Achterdeur
+    entities:
+      - binary_sensor.door_sensor_achterdeur_contact
+      - sensor.door_sensor_achterdeur_battery
+      - sensor.door_sensor_achterdeur_linkquality
+  xiaomi_door_sensor_berging:
+    name: Door Sensor - Berging
+    entities:
+      - binary_sensor.door_sensor_berging_contact
+      - sensor.door_sensor_berging_battery
+      - sensor.door_sensor_berging_linkquality

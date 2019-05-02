@@ -1,0 +1,26 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_slaapkamer_aa_temperature:
+      friendly_name: "Slaapkamer Alex & Anita - Temperatuur"
+    sensor.temp_sensor_slaapkamer_aa_humidity:
+      friendly_name: "Slaapkamer Alex & Anita - Luchtvochtigheid"
+    sensor.temp_sensor_slaapkamer_aa_pressure:
+      friendly_name: "Slaapkamer Alex & Anita - Luchtdruk"
+    sensor.temp_sensor_slaapkamer_aa_battery:
+      friendly_name: "Slaapkamer Alex & Anita - Temp Sensor - Batterij"
+    sensor.temp_sensor_slaapkamer_aa_linkquality:
+      friendly_name: "Slaapkamer Alex & Anita - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_slaapkamer_aa:
+    name: Xiaomi Devices - Slaapkamer Alex & Anita
+    entities:
+      - group.xiaomi_temp_sensor_slaapkamer_aa
+  xiaomi_temp_sensor_slaapkamer_aa:
+    name: Temperature & Humidity Sensor - Slaapkamer Alex & Anita
+    entities:
+      - sensor.temp_sensor_slaapkamer_aa_temperature
+      - sensor.temp_sensor_slaapkamer_aa_humidity
+      - sensor.temp_sensor_slaapkamer_aa_pressure
+      - sensor.temp_sensor_slaapkamer_aa_battery
+      - sensor.temp_sensor_slaapkamer_aa_linkquality

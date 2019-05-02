@@ -1,0 +1,4 @@
+homeassistant:
+  customize_glob:
+    "sensor.*_sensor_*_battery":
+      unit_of_measurement: '%'

@@ -1,0 +1,26 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_keuken_temperature:
+      friendly_name: "Keuken - Temperatuur"
+    sensor.temp_sensor_keuken_humidity:
+      friendly_name: "Keuken - Luchtvochtigheid"
+    sensor.temp_sensor_keuken_pressure:
+      friendly_name: "Keuken - Luchtdruk"
+    sensor.temp_sensor_keuken_battery:
+      friendly_name: "Keuken - Temp Sensor - Batterij"
+    sensor.temp_sensor_keuken_linkquality:
+      friendly_name: "Keuken - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_keuken:
+    name: Xiaomi Devices - Keuken
+    entities:
+      - group.xiaomi_temp_sensor_keuken
+  xiaomi_temp_sensor_keuken:
+    name: Temperature & Humidity Sensor - Keuken
+    entities:
+      - sensor.temp_sensor_keuken_temperature
+      - sensor.temp_sensor_keuken_humidity
+      - sensor.temp_sensor_keuken_pressure
+      - sensor.temp_sensor_keuken_battery
+      - sensor.temp_sensor_keuken_linkquality

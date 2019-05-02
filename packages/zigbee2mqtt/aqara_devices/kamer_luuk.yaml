@@ -1,0 +1,39 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_luuk_temperature:
+      friendly_name: "Slaapkamer Luuk - Temperatuur"
+    sensor.temp_sensor_luuk_humidity:
+      friendly_name: "Slaapkamer Luuk - Luchtvochtigheid"
+    sensor.temp_sensor_luuk_pressure:
+      friendly_name: "Slaapkamer Luuk - Luchtdruk"
+    sensor.temp_sensor_luuk_battery:
+      friendly_name: "Slaapkamer Luuk - Temp Sensor - Batterij"
+    sensor.temp_sensor_luuk_linkquality:
+      friendly_name: "Slaapkamer Luuk - Temp Sensor - Link"
+    binary_sensor.door_sensor_luuk_contact:
+      friendly_name: "Slaapkamer Luuk - Deur"
+    sensor.door_sensor_luuk_battery:
+      friendly_name: "Slaapkamer Luuk - Door Sensor - Batterij"
+    sensor.door_sensor_luuk_linkquality:
+      friendly_name: "Slaapkamer Luuk - Door Sensor - Link"
+
+group:
+  xiaomi_devices_luuk:
+    name: Xiaomi Devices - Slaapkamer Luuk
+    entities:
+      - group.xiaomi_temp_sensor_slaapkamer_luuk
+      - group.xiaomi_door_sensor_slaapkamer_luuk
+  xiaomi_temp_sensor_slaapkamer_luuk:
+    name: Temperature & Humidity Sensor - Slaapkamer Luuk
+    entities:
+      - sensor.temp_sensor_luuk_temperature
+      - sensor.temp_sensor_luuk_humidity
+      - sensor.temp_sensor_luuk_pressure
+      - sensor.temp_sensor_luuk_battery
+      - sensor.temp_sensor_luuk_linkquality
+  xiaomi_door_sensor_slaapkamer_luuk:
+    name: Door Sensor - Slaapkamer Luuk
+    entities:
+      - binary_sensor.door_sensor_luuk_contact
+      - sensor.door_sensor_luuk_battery
+      - sensor.door_sensor_luuk_linkquality

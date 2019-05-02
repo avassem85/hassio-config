@@ -1,0 +1,39 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_woonkamer_temperature:
+      friendly_name: "Woonkamer - Temperatuur"
+    sensor.temp_sensor_woonkamer_humidity:
+      friendly_name: "Woonkamer - Luchtvochtigheid"
+    sensor.temp_sensor_woonkamer_pressure:
+      friendly_name: "Woonkamer - Luchtdruk"
+    sensor.temp_sensor_woonkamer_battery:
+      friendly_name: "Woonkamer - Temp Sensor - Batterij"
+    sensor.temp_sensor_woonkamer_linkquality:
+      friendly_name: "Woonkamer - Temp Sensor - Link"
+    sensor.qube_woonkamer_action:
+      friendly_name: "Woonkamer - Qube"
+    sensor.qube_woonkamer_battery:
+      friendly_name: "Woonkamer - Qube - Batterij"
+    sensor.qube_woonkamer_linkquality:
+      friendly_name: "Woonkamer - Qube - Link"
+
+group:
+  xiaomi_devices_woonkamer:
+    name: Xiaomi Devices - Woonkamer
+    entities:
+      - group.xiaomi_temp_sensor_woonkamer
+      - group.xiaomi_qube_woonkamer
+  xiaomi_temp_sensor_woonkamer:
+    name: Temperature & Humidity Sensor - Woonkamer
+    entities:
+      - sensor.temp_sensor_woonkamer_temperature
+      - sensor.temp_sensor_woonkamer_humidity
+      - sensor.temp_sensor_woonkamer_pressure
+      - sensor.temp_sensor_woonkamer_battery
+      - sensor.temp_sensor_woonkamer_linkquality
+  xiaomi_qube_woonkamer:
+    name: Qube - Woonkamer
+    entities:
+      - sensor.qube_woonkamer_action
+      - sensor.qube_woonkamer_battery
+      - sensor.qube_woonkamer_linkquality

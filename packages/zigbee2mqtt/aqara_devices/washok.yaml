@@ -1,0 +1,68 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_washok_temperature:
+      friendly_name: "Washok - Temperatuur"
+    sensor.temp_sensor_washok_humidity:
+      friendly_name: "Washok - Luchtvochtigheid"
+    sensor.temp_sensor_washok_pressure:
+      friendly_name: "Washok - Luchtdruk"
+    sensor.temp_sensor_washok_battery:
+      friendly_name: "Washok - Temp Sensor - Batterij"
+    sensor.temp_sensor_washok_linkquality:
+      friendly_name: "Washok - Temp Sensor - Link"
+    binary_sensor.motion_sensor_washok_occupancy:
+      friendly_name: "Washok - Beweging"
+    sensor.motion_sensor_washok_illuminance:
+      friendly_name: "Washok - Licht"
+    sensor.motion_sensor_washok_battery:
+      friendly_name: "Washok - Motion Sensor - Batterij"
+    sensor.motion_sensor_washok_linkquality:
+      friendly_name: "Washok - Motion Sensor - Link"
+    binary_sensor.door_sensor_washok_contact:
+      friendly_name: "Washok - Deur"
+    sensor.door_sensor_washok_battery:
+      friendly_name: "Washok - Door Sensor - Batterij"
+    sensor.door_sensor_washok_linkquality:
+      friendly_name: "Washok - Door Sensor - Link"
+    binary_sensor.water_sensor_washok_water_leak:
+      friendly_name: "Washok - Waterlekkage"
+    sensor.water_sensor_washok_battery:
+      friendly_name: "Washok - Water Leak Sensor - Batterij"
+    sensor.water_sensor_washok_linkquality:
+      friendly_name: "Washok - Water Leak Sensor - Link"
+
+group:
+  xiaomi_devices_washok:
+    name: Xiaomi Devices - Washok
+    entities:
+      - group.xiaomi_temp_sensor_washok
+      - group.xiaomi_motion_sensor_washok
+      - group.xiaomi_door_sensor_washok
+      - group.xiaomi_water_sensor_washok
+  xiaomi_temp_sensor_washok:
+    name: Temperature & Humidity Sensor - Washok
+    entities:
+      - sensor.temp_sensor_washok_temperature
+      - sensor.temp_sensor_washok_humidity
+      - sensor.temp_sensor_washok_pressure
+      - sensor.temp_sensor_washok_battery
+      - sensor.temp_sensor_washok_linkquality
+  xiaomi_motion_sensor_washok:
+    name: Motion Sensor - Washok
+    entities:
+      - binary_sensor.motion_sensor_washok_occupancy
+      - sensor.motion_sensor_washok_illuminance
+      - sensor.motion_sensor_washok_battery
+      - sensor.motion_sensor_washok_linkquality
+  xiaomi_door_sensor_washok:
+    name: Door Sensor - Washok
+    entities:
+      - binary_sensor.door_sensor_washok_contact
+      - sensor.door_sensor_washok_battery
+      - sensor.door_sensor_washok_linkquality
+  xiaomi_water_sensor_washok:
+    name: Water Sensor - Washok
+    entities:
+      - binary_sensor.water_sensor_washok_water_leak
+      - sensor.water_sensor_washok_battery
+      - sensor.water_sensor_washok_linkquality

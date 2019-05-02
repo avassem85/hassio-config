@@ -1,0 +1,97 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_kantoor_temperature:
+      friendly_name: "Kantoor - Temperatuur"
+    sensor.temp_sensor_kantoor_humidity:
+      friendly_name: "Kantoor - Luchtvochtigheid"
+    sensor.temp_sensor_kantoor_pressure:
+      friendly_name: "Kantoor - Luchtdruk"
+    sensor.temp_sensor_kantoor_battery:
+      friendly_name: "Kantoor - Temp Sensor - Batterij"
+    sensor.temp_sensor_kantoor_linkquality:
+      friendly_name: "Kantoor - Temp Sensor - Link"
+    binary_sensor.motion_sensor_kantoor_occupancy:
+      friendly_name: "Kantoor - Beweging"
+    sensor.motion_sensor_kantoor_illuminance:
+      friendly_name: "Kantoor - Licht"
+    sensor.motion_sensor_kantoor_battery:
+      friendly_name: "Kantoor - Motion Sensor - Batterij"
+    sensor.motion_sensor_kantoor_linkquality:
+      friendly_name: "Kantoor - Motion Sensor - Link"
+    binary_sensor.door_sensor_kantoor_contact:
+      friendly_name: "Kantoor - Deur"
+    sensor.door_sensor_kantoor_battery:
+      friendly_name: "Kantoor - Door Sensor - Batterij"
+    sensor.door_sensor_kantoor_linkquality:
+      friendly_name: "Kantoor - Door Sensor - Link"
+    sensor.button_kantoor_click:
+      friendly_name: "Kantoor - Button"
+    sensor.qube_kantoor_action:
+      friendly_name: "Kantoor - Qube"
+    sensor.qube_kantoor_battery:
+      friendly_name: "Kantoor - Qube - Batterij"
+    sensor.qube_kantoor_linkquality:
+      friendly_name: "Kantoor - Qube - Link"
+    sensor.vibration_sensor_kantoor_action:
+      friendly_name: "Kantoor - Trillingen"
+    sensor.temp_sensor_snapmaker_temperature:
+      friendly_name: "Snapmaker - Case Temperatuur"
+    sensor.temp_sensor_snapmaker_humidity:
+      friendly_name: "Snapmaker - Case Luchtvochtigheid"
+    sensor.temp_sensor_snapmaker_battery:
+      friendly_name: "Snapmaker - Temp Sensor - Batterij"
+    sensor.temp_sensor_snapmaker_linkquality:
+      friendly_name: "Snapmaker - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_kantoor:
+    name: Xiaomi Devices - Kantoor
+    entities:
+      - group.xiaomi_temp_sensor_kantoor
+      - group.xiaomi_motion_sensor_kantoor
+      - group.xiaomi_door_sensor_kantoor
+      - group.xiaomi_qube_kantoor
+      - group.xiaomi_button_kantoor
+      - group.xiaomi_temp_sensor_snapmaker
+  xiaomi_temp_sensor_kantoor:
+    name: Temperature & Humidity Sensor - Kantoor
+    entities:
+      - sensor.temp_sensor_kantoor_temperature
+      - sensor.temp_sensor_kantoor_humidity
+      - sensor.temp_sensor_kantoor_pressure
+      - sensor.temp_sensor_kantoor_battery
+      - sensor.temp_sensor_kantoor_linkquality
+  xiaomi_motion_sensor_kantoor:
+    name: Motion Sensor - Kantoor
+    entities:
+      - binary_sensor.motion_sensor_kantoor_occupancy
+      - sensor.motion_sensor_kantoor_illuminance
+      - sensor.motion_sensor_kantoor_battery
+      - sensor.motion_sensor_kantoor_linkquality
+  xiaomi_door_sensor_kantoor:
+    name: Door Sensor - Kantoor
+    entities:
+      - binary_sensor.door_sensor_kantoor_contact
+      - sensor.door_sensor_kantoor_battery
+      - sensor.door_sensor_kantoor_linkquality
+  xiaomi_button_kantoor:
+    name: Button - Kantoor
+    entities:
+      - sensor.button_kantoor_click
+  xiaomi_qube_kantoor:
+    name: Qube - Kantoor
+    entities:
+      - sensor.qube_kantoor_action
+      - sensor.qube_kantoor_battery
+      - sensor.qube_kantoor_linkquality
+  xiaomi_vibration_sensor_kantoor:
+    name: Vibration Sensor - Kantoor
+    entities:
+      - sensor.vibration_sensor_kantoor_action
+  xiaomi_temp_sensor_snapmaker:
+    name: Temperature & Humidity Sensor - Snapmaker
+    entities:
+      - sensor.temp_sensor_snapmaker_temperature
+      - sensor.temp_sensor_snapmaker_humidity
+      - sensor.temp_sensor_snapmaker_battery
+      - sensor.temp_sensor_snapmaker_linkquality

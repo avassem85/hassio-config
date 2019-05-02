@@ -1,0 +1,26 @@
+homeassistant:
+  customize_glob:
+    sensor.temp_sensor_badkamer_temperature:
+      friendly_name: "Badkamer - Temperatuur"
+    sensor.temp_sensor_badkamer_humidity:
+      friendly_name: "Badkamer - Luchtvochtigheid"
+    sensor.temp_sensor_badkamer_pressure:
+      friendly_name: "Badkamer - Luchtdruk"
+    sensor.temp_sensor_badkamer_battery:
+      friendly_name: "Badkamer - Temp Sensor - Batterij"
+    sensor.temp_sensor_badkamer_linkquality:
+      friendly_name: "Badkamer - Temp Sensor - Link"
+
+group:
+  xiaomi_devices_badkamer:
+    name: Xiaomi Devices - Badkamer
+    entities:
+      - group.xiaomi_temp_sensor_badkamer
+  xiaomi_temp_sensor_badkamer:
+    name: Temperature & Humidity Sensor - Badkamer
+    entities:
+      - sensor.temp_sensor_badkamer_temperature
+      - sensor.temp_sensor_badkamer_humidity
+      - sensor.temp_sensor_badkamer_pressure
+      - sensor.temp_sensor_badkamer_battery
+      - sensor.temp_sensor_badkamer_linkquality
