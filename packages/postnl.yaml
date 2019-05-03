@@ -1,0 +1,16 @@
+homeassistant:
+  customize_glob:
+    sensor.postnl:
+      friendly_name: PostNL - Pakketjes
+      unit_of_measurement: Pakketje(s)
+
+group:
+  postnl:
+    name: PostNL
+    entities:
+      - sensor.postnl
+
+sensor:
+  - platform: postnl
+    username: !secret POSTNL_USERNAME
+    password: !secret POSTNL_PASSWORD
