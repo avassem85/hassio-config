@@ -1,0 +1,99 @@
+homeassistant:
+  customize_glob:
+    zwave.schakelaars_kantoor:
+      friendly_name: GreenWave PowerNode 6 port - Kantoor
+    switch.schakelaars_kantoor_switch:
+      friendly_name: Kantoor - Schermen
+    switch.schakelaars_kantoor_switch_2:
+      hidden: true
+    switch.schakelaars_kantoor_switch_3:
+      hidden: true
+    switch.schakelaars_kantoor_switch_4:
+      friendly_name: Kantoor - PC
+    switch.schakelaars_kantoor_switch_5:
+      hidden: true
+    switch.schakelaars_kantoor_switch_6:
+      friendly_name: Kantoor - Speakers
+    sensor.schakelaars_kantoor_power:
+      friendly_name: Kantoor - Schermen - Verbruik (W)
+    sensor.schakelaars_kantoor_power_2:
+      hidden: true
+    sensor.schakelaars_kantoor_power_3:
+      hidden: true
+    sensor.schakelaars_kantoor_power_4:
+      friendly_name: Kantoor - PC - Verbruik (W)
+    sensor.schakelaars_kantoor_power_5:
+      hidden: true
+    sensor.schakelaars_kantoor_power_6:
+      friendly_name: Kantoor - Speakers - Verbruik (W)
+    sensor.schakelaars_kantoor_energy:
+      friendly_name: Kantoor - Schermen - Verbruik (kWh)
+    sensor.schakelaars_kantoor_energy_2:
+      hidden: true
+    sensor.schakelaars_kantoor_energy_3:
+      hidden: true
+    sensor.schakelaars_kantoor_energy_4:
+      friendly_name: Kantoor - PC - Verbruik (kWh)
+    sensor.schakelaars_kantoor_energy_5:
+      hidden: true
+    sensor.schakelaars_kantoor_energy_6:
+      friendly_name: Kantoor - Speakers - Verbruik (kWh)
+    sensor.schakelaars_kantoor_previous_reading:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_2:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_3:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_4:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_5:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_6:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_7:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_8:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_9:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_10:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_11:
+      hidden: true
+    sensor.schakelaars_kantoor_previous_reading_12:
+      hidden: true
+    
+group:
+  schakelaars_kantoor:
+    name: GreenWave PowerNode 6 port - Kantoor
+    entities:
+      - switch.schakelaars_kantoor_switch
+      - switch.schakelaars_kantoor_switch_2
+      - switch.schakelaars_kantoor_switch_3
+      - switch.schakelaars_kantoor_switch_4
+      - switch.schakelaars_kantoor_switch_5
+      - switch.schakelaars_kantoor_switch_6
+      - sensor.schakelaars_kantoor_power
+      - sensor.schakelaars_kantoor_power_2
+      - sensor.schakelaars_kantoor_power_3
+      - sensor.schakelaars_kantoor_power_4
+      - sensor.schakelaars_kantoor_power_5
+      - sensor.schakelaars_kantoor_power_6
+      - sensor.schakelaars_kantoor_energy
+      - sensor.schakelaars_kantoor_energy_2
+      - sensor.schakelaars_kantoor_energy_3
+      - sensor.schakelaars_kantoor_energy_4
+      - sensor.schakelaars_kantoor_energy_5
+      - sensor.schakelaars_kantoor_energy_6
+      - sensor.schakelaars_kantoor_previous_reading
+      - sensor.schakelaars_kantoor_previous_reading_2
+      - sensor.schakelaars_kantoor_previous_reading_3
+      - sensor.schakelaars_kantoor_previous_reading_4
+      - sensor.schakelaars_kantoor_previous_reading_5
+      - sensor.schakelaars_kantoor_previous_reading_6
+      - sensor.schakelaars_kantoor_previous_reading_7
+      - sensor.schakelaars_kantoor_previous_reading_8
+      - sensor.schakelaars_kantoor_previous_reading_9
+      - sensor.schakelaars_kantoor_previous_reading_10
+      - sensor.schakelaars_kantoor_previous_reading_11
+      - sensor.schakelaars_kantoor_previous_reading_12

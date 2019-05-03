@@ -1,0 +1,15 @@
+homeassistant:
+  customize_glob:
+    zwave.schakelaars_woonkamer:
+      friendly_name: FIBARO FGS221 Double Relay Switch 2x1.5kW - Woonkamer
+    switch.schakelaars_woonkamer_switch:
+      hidden: true
+    switch.schakelaars_woonkamer_switch_2:
+      friendly_name: Woonkamer - Verlichting
+
+group:
+  schakelaars_woonkamer:
+    name: FIBARO FGS221 Double Relay Switch 2x1.5kW - Woonkamer
+    entities:
+      - switch.schakelaars_woonkamer_switch
+      - switch.schakelaars_woonkamer_switch_2

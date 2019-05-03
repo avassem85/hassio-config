@@ -1,0 +1,99 @@
+homeassistant:
+  customize_glob:
+    zwave.schakelaars_tvmeubel:
+      friendly_name: GreenWave PowerNode 6 port - TV Meubel
+    switch.schakelaars_tvmeubel_switch:
+      friendly_name: Woonkamer - Steamlink
+    switch.schakelaars_tvmeubel_switch_2:
+      friendly_name: Woonkamer - Apple TV
+    switch.schakelaars_tvmeubel_switch_3:
+      friendly_name: Woonkamer - Xs4all
+    switch.schakelaars_tvmeubel_switch_4:
+      friendly_name: Woonkamer - Sonos
+    switch.schakelaars_tvmeubel_switch_5:
+      friendly_name: Woonkamer - TV
+    switch.schakelaars_tvmeubel_switch_6:
+      friendly_name: Woonkamer - Logitech Harmony
+    sensor.schakelaars_tvmeubel_power:
+      friendly_name: Woonkamer - Steamlink - Verbruik (W)
+    sensor.schakelaars_tvmeubel_power_2:
+      friendly_name: Woonkamer - Apple TV - Verbruik (W)
+    sensor.schakelaars_tvmeubel_power_3:
+      friendly_name: Woonkamer - Xs4all - Verbruik (W)
+    sensor.schakelaars_tvmeubel_power_4:
+      friendly_name: Woonkamer - Sonos - Verbruik (W)
+    sensor.schakelaars_tvmeubel_power_5:
+      friendly_name: Woonkamer - TV - Verbruik (W)
+    sensor.schakelaars_tvmeubel_power_6:
+      friendly_name: Woonkamer - Logitech Harmony - Verbruik (W)
+    sensor.schakelaars_tvmeubel_energy:
+      friendly_name: Woonkamer - Steamlink - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_energy_2:
+      friendly_name: Woonkamer - Apple TV - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_energy_3:
+      friendly_name: Woonkamer - Xs4all - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_energy_4:
+      friendly_name: Woonkamer - Sonos - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_energy_5:
+      friendly_name: Woonkamer - TV - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_energy_6:
+      friendly_name: Woonkamer - Logitech Harmony - Verbruik (kWh)
+    sensor.schakelaars_tvmeubel_previous_reading:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_2:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_3:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_4:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_5:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_6:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_7:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_8:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_9:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_10:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_11:
+      hidden: true
+    sensor.schakelaars_tvmeubel_previous_reading_12:
+      hidden: true
+    
+group:
+  schakelaars_tvmeubel:
+    name: GreenWave PowerNode 6 port - TV Meubel
+    entities:
+      - switch.schakelaars_tvmeubel_switch
+      - switch.schakelaars_tvmeubel_switch_2
+      - switch.schakelaars_tvmeubel_switch_3
+      - switch.schakelaars_tvmeubel_switch_4
+      - switch.schakelaars_tvmeubel_switch_5
+      - switch.schakelaars_tvmeubel_switch_6
+      - sensor.schakelaars_tvmeubel_power
+      - sensor.schakelaars_tvmeubel_power_2
+      - sensor.schakelaars_tvmeubel_power_3
+      - sensor.schakelaars_tvmeubel_power_4
+      - sensor.schakelaars_tvmeubel_power_5
+      - sensor.schakelaars_tvmeubel_power_6
+      - sensor.schakelaars_tvmeubel_energy
+      - sensor.schakelaars_tvmeubel_energy_2
+      - sensor.schakelaars_tvmeubel_energy_3
+      - sensor.schakelaars_tvmeubel_energy_4
+      - sensor.schakelaars_tvmeubel_energy_5
+      - sensor.schakelaars_tvmeubel_energy_6
+      - sensor.schakelaars_tvmeubel_previous_reading
+      - sensor.schakelaars_tvmeubel_previous_reading_2
+      - sensor.schakelaars_tvmeubel_previous_reading_3
+      - sensor.schakelaars_tvmeubel_previous_reading_4
+      - sensor.schakelaars_tvmeubel_previous_reading_5
+      - sensor.schakelaars_tvmeubel_previous_reading_6
+      - sensor.schakelaars_tvmeubel_previous_reading_7
+      - sensor.schakelaars_tvmeubel_previous_reading_8
+      - sensor.schakelaars_tvmeubel_previous_reading_9
+      - sensor.schakelaars_tvmeubel_previous_reading_10
+      - sensor.schakelaars_tvmeubel_previous_reading_11
+      - sensor.schakelaars_tvmeubel_previous_reading_12

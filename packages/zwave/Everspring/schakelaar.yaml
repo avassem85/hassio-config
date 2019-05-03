@@ -1,0 +1,21 @@
+homeassistant:
+  customize_glob:
+    zwave.schakelaar:
+      friendly_name: Everspring AN158 Plug-in Meter Appliance Module
+    switch.schakelaar_switch:
+      friendly_name: Schakelaar
+    sensor.schakelaar_energy:
+      friendly_name: Schakelaar - Verbruik (kWh)
+    sensor.schakelaar_power:
+      friendly_name: Schakelaar - Verbruik (W)
+    sensor.schakelaar_previous_reading:
+      hidden: true
+      
+group:
+  eversprint_schakelaar:
+    name: Everspring AN158 Plug-in Meter Appliance Module
+    entities:
+      - switch.schakelaar_switch
+      - sensor.schakelaar_energy
+      - sensor.schakelaar_power
+      - sensor.schakelaar_previous_reading

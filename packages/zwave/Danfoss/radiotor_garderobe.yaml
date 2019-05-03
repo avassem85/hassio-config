@@ -1,0 +1,15 @@
+homeassistant:
+  customize_glob:
+    zwave.radiator_garderobe:
+      friendly_name: Devolo Home Control Radiator Thermostat - Garderobe
+    climate.radiator_garderobe_heating_1:
+      friendly_name: Garderobe - Verwarming
+    sensor.radiator_garderobe_temperature:
+      friendly_name: Garderobe - Verwarming - Temperatuur
+
+group:
+  radiator_garderobe:
+    name: Devolo Home Control Radiator Thermostat - Garderobe
+    entities:
+      - climate.radiator_garderobe_heating_1
+      - sensor.radiator_garderobe_temperature

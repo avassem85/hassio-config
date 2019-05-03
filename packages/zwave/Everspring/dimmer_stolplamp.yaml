@@ -1,0 +1,24 @@
+homeassistant:
+  customize_glob:
+    zwave.dimmer_stolplamp:
+      friendly_name: Everspring AD147 Plug-in Dimmer Module - Stolplamp
+    light.dimmer_stolplamp_level:
+      friendly_name: Keuken - Stolplamp
+    sensor.dimmer_stolplamp_alarm_level:
+      hidden: true
+    sensor.dimmer_stolplamp_alarm_type:
+      hidden: true
+    sensor.dimmer_stolplamp_power_management:
+      hidden: true
+    sensor.dimmer_stolplamp_sourcenodeid:
+      hidden: true
+      
+group:
+  dimmer_stolplamp:
+    name: Everspring AD147 Plug-in Dimmer Module - Stolplamp
+    entities:
+      - light.dimmer_stolplamp_level
+      - sensor.dimmer_stolplamp_alarm_level
+      - sensor.dimmer_stolplamp_alarm_type
+      - sensor.dimmer_stolplamp_power_management
+      - sensor.dimmer_stolplamp_sourcenodeid

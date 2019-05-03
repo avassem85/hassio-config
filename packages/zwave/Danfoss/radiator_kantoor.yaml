@@ -1,0 +1,15 @@
+homeassistant:
+  customize_glob:
+    zwave.radiator_kantoor:
+      friendly_name: Devolo Home Control Radiator Thermostat - Kantoor
+    climate.radiator_kantoor_heating_1:
+      friendly_name: Kantoor - Verwarming
+    sensor.radiator_kantoor_temperature:
+      friendly_name: Kantoor - Verwarming - Temperatuur
+
+group:
+  radiator_kantoor:
+    name: Devolo Home Control Radiator Thermostat - Kantoor
+    entities:
+      - climate.radiator_kantoor_heating_1
+      - sensor.radiator_kantoor_temperature

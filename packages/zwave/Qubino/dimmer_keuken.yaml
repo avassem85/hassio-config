@@ -1,0 +1,40 @@
+homeassistant:
+  customize_glob:
+    zwave.dimmer_keuken:
+      friendly_name: Qubino ZMNHDA2 Flush Dimmer - Keuken
+    light.dimmer_keuken_level:
+      friendly_name: Keuken - Verlichting
+    switch.dimmer_keuken_switch:
+      friendly_name: Keuken - Verlichting
+      hidden: true
+    sensor.dimmer_keuken_energy:
+      friendly_name: Keuken - Verlichting - Verbruik (kWh)
+    sensor.dimmer_keuken_power:
+      friendly_name: Keuken - Verlichting - Verbruik (W)
+    sensor.dimmer_keuken_exporting:
+      hidden: true
+    sensor.dimmer_keuken_interval:
+      hidden: true
+    sensor.dimmer_keuken_previous_reading:
+      hidden: true
+    sensor.dimmer_keuken_temperature:
+      hidden: true
+    binary_sensor.dimmer_keuken_sensor:
+      hidden: true
+    binary_sensor.dimmer_keuken_sensor_2:
+      hidden: true
+
+group:
+  dimmer_keuken:
+    name: Qubino ZMNHDA2 Flush Dimmer - Keuken
+    entities:
+      - light.dimmer_keuken_level
+      - switch.dimmer_keuken_switch
+      - sensor.dimmer_keuken_energy
+      - sensor.dimmer_keuken_power
+      - sensor.dimmer_keuken_exporting
+      - sensor.dimmer_keuken_interval
+      - sensor.dimmer_keuken_previous_reading
+      - sensor.dimmer_keuken_temperature
+      - binary_sensor.dimmer_keuken_sensor
+      - binary_sensor.dimmer_keuken_sensor_2

@@ -1,0 +1,24 @@
+homeassistant:
+  customize_glob:
+    zwave.sensor_gang_beneden:
+      friendly_name: Fibaro Motion Sensor - Gang beneden
+    binary_sensor.sensor_gang_beneden_sensor:
+      friendly_name: Gang beneden - Beweging
+      device_class: motion
+    sensor.sensor_gang_beneden_general:
+      hidden: true
+    sensor.sensor_gang_beneden_general_2:
+      hidden: true
+    sensor.sensor_gang_beneden_luminance:
+      friendly_name: Gang beneden - Licht
+    sensor.sensor_gang_beneden_temperature:
+      friendly_name: Gang beneden - Temperatuur
+
+group:
+  sensor_gang_beneden:
+    name: Fibaro Motion Sensor - Gang beneden
+    entities:
+      - binary_sensor.sensor_gang_beneden_sensor
+      - sensor.sensor_gang_beneden_general
+      - sensor.sensor_gang_beneden_luminance
+      - sensor.sensor_gang_beneden_temperature

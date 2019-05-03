@@ -1,0 +1,80 @@
+homeassistant:
+  customize_glob:
+    zwave.sensor_voordeur:
+      friendly_name: Philio PST02-A 4 in 1 Multi-Sensor - Voordeur
+    sensor.sensor_voordeur_temperature:
+      friendly_name: Voordeur - Temperatuur
+    sensor.sensor_voordeur_luminance:
+      friendly_name: Voordeur - Licht
+    binary_sensor.sensor_voordeur_door_window_sensor:
+      hidden: true
+    binary_sensor.sensor_voordeur_motion_sensor:
+      hidden: true
+    binary_sensor.sensor_voordeur_tamper_sensor:
+      hidden: true
+    sensor.sensor_voordeur_access_control:
+      hidden: true
+    sensor.sensor_voordeur_alarm_level:
+      hidden: true
+    sensor.sensor_voordeur_alarm_type:
+      hidden: true
+    sensor.sensor_voordeur_burglar:
+      hidden: true
+    sensor.sensor_voordeur_sourcenodeid:
+      hidden: true
+
+group:
+  sensor_voordeur:
+    name: Philio PST02-A 4 in 1 Multi-Sensor - Voordeur
+    entities:
+      - sensor.sensor_voordeur_temperature
+      - sensor.sensor_voordeur_luminance
+      - binary_sensor.sensor_voordeur_door_window_sensor
+      - binary_sensor.sensor_voordeur_motion_sensor
+      - binary_sensor.sensor_voordeur_tamper_sensor
+      - sensor.sensor_voordeur_access_control
+      - sensor.sensor_voordeur_alarm_level
+      - sensor.sensor_voordeur_alarm_type
+      - sensor.sensor_voordeur_burglar
+      - sensor.sensor_voordeur_sourcenodeid
+      - binary_sensor.door_sensor_voordeur
+      - binary_sensor.motion_sensor_voordeur
+      - binary_sensor.tamper_sensor_voordeur
+    
+binary_sensor:
+  - platform: template
+    sensors:
+      door_sensor_voordeur:
+        friendly_name: 'Voordeur - Deur'
+        value_template: '{{ is_state("sensor.sensor_voordeur_access_control", "22") }}'
+        device_class: door
+        entity_id: sensor.sensor_voordeur_access_control
+
+      motion_sensor_voordeur:
+        friendly_name: 'Voordeur - Beweging'
+        value_template: '{{ is_state("sensor.sensor_voordeur_burglar", "8") }}'
+        device_class: motion
+        entity_id: sensor.sensor_voordeur_burglar
+
+      tamper_sensor_voordeur:
+        friendly_name: 'Voordeur - Knoeien'
+        value_template: '{{ is_state("sensor.sensor_voordeur_burglar", "3") }}'
+        device_class: safety
+        entity_id: sensor.sensor_voordeur_burglar
+
+# Philio PST02-A 4 in 1 Multi-Sensor - Config
+# config 2: 255
+# config 3: 12
+# config 4: 99
+# config 5: 0
+# config 6: 4
+# config 7: 2
+# config 8: 3
+# config 9: 4
+# config 10: 12
+# config 11: 12
+# config 12: 12
+# config 13: 12
+# config 20: 30
+# config 21: 1
+# config 22: 10

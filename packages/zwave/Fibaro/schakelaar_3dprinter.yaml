@@ -1,0 +1,30 @@
+homeassistant:
+  customize_glob:
+    zwave.schakelaar_3dprinter:
+      friendly_name: Fibaro ZMNHDA2 Flush Dimmer - Snapmaker
+    switch.schakelaar_3dprinter_switch:
+      friendly_name: Kantoor - Snapmaker
+    sensor.schakelaar_3dprinter_energy:
+      friendly_name: Kantoor - Snapmaker - Verbruik (kWh)
+    sensor.schakelaar_3dprinter_power:
+      friendly_name: Kantoor - Snapmaker - Verbruik (W)
+    sensor.schakelaar_3dprinter_exporting:
+      hidden: true
+    sensor.schakelaar_3dprinter_power_2:
+      hidden: true
+    sensor.schakelaar_3dprinter_interval:
+      hidden: true
+    sensor.schakelaar_3dprinter_previous_reading:
+      hidden: true
+
+group:
+  schakelaar_3dprinter:
+    name: FIBARO FGWPE/F Wall Plug - Snapmaker
+    entities:
+      - switch.schakelaar_3dprinter_switch
+      - sensor.schakelaar_3dprinter_energy
+      - sensor.schakelaar_3dprinter_power
+      - sensor.schakelaar_3dprinter_exporting
+      - sensor.schakelaar_3dprinter_power_2
+      - sensor.schakelaar_3dprinter_interval
+      - sensor.schakelaar_3dprinter_previous_reading

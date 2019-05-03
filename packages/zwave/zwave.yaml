@@ -1,0 +1,75 @@
+# Philio PST02-A 4 in 1 Multi-Sensor - Config
+# config 2: 255
+# config 3: 12
+# config 4: 99
+# config 5: 0
+# config 6: 4
+# config 7: 2
+# config 8: 3
+# config 9: 4
+# config 10: 12
+# config 11: 12
+# config 12: 12
+# config 13: 12
+# config 20: 30
+# config 21: 1
+# config 22: 10
+
+zwave:
+  usb_path: /dev/ttyACM1
+  polling_interval: 60000
+  device_config:
+    sensor.schakelaars_kantoor_energy:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_energy_2:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_energy_3:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_energy_4:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_energy_5:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_energy_6:
+      polling_intensity: 60
+    sensor.schakelaars_kantoor_power:
+      polling_intensity: 10
+    sensor.schakelaars_kantoor_power_2:
+      polling_intensity: 10
+    sensor.schakelaars_kantoor_power_3:
+      polling_intensity: 10
+    sensor.schakelaars_kantoor_power_4:
+      polling_intensity: 10
+    sensor.schakelaars_kantoor_power_5:
+      polling_intensity: 10
+    sensor.schakelaars_kantoor_power_6:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_energy:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_energy_2:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_energy_3:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_energy_4:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_energy_5:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_energy_6:
+      polling_intensity: 60
+    sensor.schakelaars_tvmeubel_power:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_power_2:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_power_3:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_power_4:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_power_5:
+      polling_intensity: 10
+    sensor.schakelaars_tvmeubel_power_6:
+      polling_intensity: 10
+
+# developer tools service: zwave.rename_node
+# {
+# "node_id": "13",
+# "name": "schakelaars_tvmeubel"
+# }
