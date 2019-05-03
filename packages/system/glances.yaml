@@ -1,8 +1,74 @@
+# homeassistant:
+#   customize_glob:
+#     sensor.glances_disk_used_2:
+#       friendly_name: 
+#     sensor.glances_disk_used:
+#       friendly_name: 
+#     sensor.glances_disk_free:
+#       friendly_name: 
+#     sensor.glances_ram_used_2:
+#       friendly_name: 
+#     sensor.glances_ram_used:
+#       friendly_name: 
+#     sensor.glances_ram_free:
+#       friendly_name: 
+#     sensor.glances_swap_used_2:
+#       friendly_name: 
+#     sensor.glances_swap_used:
+#       friendly_name: 
+#     sensor.glances_swap_free:
+#       friendly_name: 
+#     sensor.glances_cpu_load:
+#       friendly_name: 
+#     sensor.glances_running:
+#       friendly_name: 
+#     sensor.glances_total:
+#       friendly_name: 
+#     sensor.glances_thread:
+#       friendly_name: 
+#     sensor.glances_sleeping:
+#       friendly_name: 
+#     sensor.glances_cpu_used:
+#       friendly_name: 
+#     sensor.glances_cpu_temp:
+#       friendly_name: 
+#     sensor.glances_containers_active:
+#       friendly_name: 
+#     sensor.glances_containers_cpu_used:
+#       friendly_name: 
+#     sensor.glances_containers_ram_used:
+#       friendly_name: 
+
+group:
+  glances:
+    name: Glances
+    entities:
+      - sensor.glances_disk_used_2
+      - sensor.glances_disk_used
+      - sensor.glances_disk_free        
+      - sensor.glances_containers_active
+      - sensor.glances_ram_used_2
+      - sensor.glances_ram_used
+      - sensor.glances_ram_free
+      - sensor.glances_swap_used_2
+      - sensor.glances_swap_used
+      - sensor.glances_swap_free
+      - sensor.glances_cpu_load
+      - sensor.glances_running
+      - sensor.glances_total
+      - sensor.glances_thread
+      - sensor.glances_sleeping
+      - sensor.glances_cpu_used
+      - sensor.glances_cpu_temp
+      - sensor.glances_containers_active
+      - sensor.glances_containers_cpu_used
+      - sensor.glances_containers_ram_used
+
 sensor:
   - platform: glances
-    host: 127.0.0.1
+    host: !secret GLANCES_HOST
     port: 61208
-    ssl: true
+    ssl: false
     verify_ssl: false
     version: 3
     resources:

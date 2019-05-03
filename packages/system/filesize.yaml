@@ -20,4 +20,4 @@ sensor:
     file_paths:
         - !secret FILESIZE_HOMEASSISTANT_DB
         - !secret FILESIZE_HOMEASSISTANT_LOG
-        # - !secret FILESIZE_ZWAVE_LOG
+        - !secret FILESIZE_ZWAVE_LOG

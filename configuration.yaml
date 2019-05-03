@@ -52,4 +52,4 @@ script: !include scripts.yaml
 logger:
   default: warning
   logs:
-      homeassistant.components.influxdb: debug
+      homeassistant.components.glances.sensor: debug
