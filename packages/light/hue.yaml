@@ -132,5 +132,5 @@ group:
 hue:
   bridges:
     - host: !secret HUE_IP_ADDRESS
-      allow_unreachable: true
-      allow_hue_groups: true
+      allow_unreachable: True
+      allow_hue_groups: True

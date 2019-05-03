@@ -1,0 +1,30 @@
+homeassistant:
+  customize_glob:
+    sensor.avassem85_hassio_config_last_build_duration:
+      friendly_name: Travis - Home Assistant - Build duur
+    sensor.avassem85_hassio_config_last_build_id:
+      friendly_name: Travis - Home Assistant - Build id
+    sensor.avassem85_hassio_config_last_build_started_at:
+      friendly_name: Travis - Home Assistant - Build gestart
+    sensor.avassem85_hassio_config_last_build_finished_at:
+      friendly_name: Travis - Home Assistant - Build klaar
+    sensor.avassem85_hassio_config_last_build_state:
+      friendly_name: Travis - Home Assistant - Build status
+    sensor.avassem85_hassio_config_state:
+      friendly_name: Travis - Home Assistant - Status
+
+group:
+  travisci:
+    name: Travis - Home Assistant
+    entities:
+      - sensor.avassem85_hassio_config_last_build_duration
+      - sensor.avassem85_hassio_config_last_build_id
+      - sensor.avassem85_hassio_config_last_build_started_at
+      - sensor.avassem85_hassio_config_last_build_finished_at
+      - sensor.avassem85_hassio_config_last_build_state
+      - sensor.avassem85_hassio_config_state
+
+sensor:
+  - platform: travisci
+    api_key: !secret TRAVIS_API_TOKEN
+    repository: avassem85/hassio-config
