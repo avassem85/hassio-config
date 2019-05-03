@@ -15,7 +15,11 @@ homeassistant:
       hidden: true
     sensor.dimmer_keuken_interval:
       hidden: true
+    sensor.dimmer_keuken_interval_2:
+      hidden: true
     sensor.dimmer_keuken_previous_reading:
+      hidden: true
+    sensor.dimmer_keuken_previous_reading_2:
       hidden: true
     sensor.dimmer_keuken_temperature:
       hidden: true
@@ -34,7 +38,9 @@ group:
       - sensor.dimmer_keuken_power
       - sensor.dimmer_keuken_exporting
       - sensor.dimmer_keuken_interval
+      - sensor.dimmer_keuken_interval_2
       - sensor.dimmer_keuken_previous_reading
+      - sensor.dimmer_keuken_previous_reading_2
       - sensor.dimmer_keuken_temperature
       - binary_sensor.dimmer_keuken_sensor
       - binary_sensor.dimmer_keuken_sensor_2
