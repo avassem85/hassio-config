@@ -1,0 +1,26 @@
+homeassistant:
+  customize_glob:
+    sensor.speedtest_download:
+      friendly_name: Internet - Download
+    sensor.speedtest_upload:
+      friendly_name: Internet - Upload
+    sensor.speedtest_ping:
+      friendly_name: Internet - Ping
+
+group:
+  speedtest:
+    name: Internet - Speedtest
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+
+speedtestdotnet:
+  #Server-id = Amsterdam (http://c.speedtest.net/speedtest-servers-static.php)
+  server_id: 10561 
+  scan_interval:
+    minutes: 30
+  monitored_conditions:
+    - ping
+    - download
+    - upload

@@ -1,0 +1,40 @@
+homeassistant:
+  customize_glob:
+    sensor.fritz_box_7490_bytes_received:
+      friendly_name: Internet - Bytes received
+    sensor.fritz_box_7490_bytes_sent:
+      friendly_name: Internet - Bytes sent
+    sensor.fritz_box_7490_kbyte_sec_received:
+      friendly_name: Internet - kbyte/sec received
+    sensor.fritz_box_7490_kbyte_sec_sent:
+      friendly_name: Internet - kbyte/sec sent
+    sensor.fritz_box_7490_packets_received:
+      friendly_name: Internet - Packets received
+    sensor.fritz_box_7490_packets_sent:
+      friendly_name: Internet - Packets received
+    sensor.fritz_box_7490_packets_sec_received:
+      friendly_name: Internet - Packets/sec received
+    sensor.fritz_box_7490_packets_sec_sent:
+      friendly_name: Internet - Packets/sec received
+
+group:
+  fritbox_internetgateway:
+    name: Fritzbox Internet Gateway
+    entities:
+      - sensor.fritz_box_7490_bytes_received
+      - sensor.fritz_box_7490_bytes_sent
+      - sensor.fritz_box_7490_kbyte_sec_received
+      - sensor.fritz_box_7490_kbyte_sec_sent
+      - sensor.fritz_box_7490_packets_received
+      - sensor.fritz_box_7490_packets_sent
+      - sensor.fritz_box_7490_packets_sec_received
+      - sensor.fritz_box_7490_packets_sec_sent
+
+# device_tracker:
+#   - platform: fritz
+#     host: !secret FRITZBOX_HOST
+
+sensor:
+  - platform: fritzbox_netmonitor
+    name: fritzbox
+    host: !secret FRITZBOX_HOST
