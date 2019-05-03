@@ -5,6 +5,7 @@ python: "3.6.4"
 before_install:
   - touch fake_key.pem
   - mv travis_secrets.yaml secrets.yaml
+  - mkdir config
   - touch ./home-assistant_v2.db
   - touch ./home-assistant.log
   - touch ./OZW_Log.txt
