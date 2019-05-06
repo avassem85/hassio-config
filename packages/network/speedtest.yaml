@@ -17,7 +17,7 @@ group:
 
 speedtestdotnet:
   #Server-id = Amsterdam (http://c.speedtest.net/speedtest-servers-static.php)
-  server_id: 10561 
+  server_id: 13218 
   scan_interval:
     minutes: 30
   monitored_conditions:
