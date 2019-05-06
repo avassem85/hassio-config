@@ -14,6 +14,7 @@
 
 # Ignore files
 *.pyc
+www/zigbee2mqtt_networkmap/source.js
 
 # Ignore folders.
 .storage
