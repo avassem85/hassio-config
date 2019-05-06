@@ -1,0 +1,20 @@
+webhook:
+ 
+zigbee2mqtt_networkmap:
+
+panel_iframe:
+  zigbee2mqtt_networkmap:
+    title: 'Zigbee2mqtt Network'
+    url: '/local/zigbee2mqtt_networkmap/map.html'
+    icon: 'mdi:graphql'
+
+automation:
+  - id: update_networkmap
+    alias: 'Zigbee Map Updaten'  
+    hide_entity: true  
+    trigger:
+      platform: time_pattern
+      minutes: '/10'
+      seconds: 00
+    action:
+      service: zigbee2mqtt_networkmap.update
