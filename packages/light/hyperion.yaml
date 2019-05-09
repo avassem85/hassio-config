@@ -1,0 +1,25 @@
+homeassistant:
+  customize_glob:
+    light.ambilight:
+      friendly_name: Woonkamer - Ambilight
+
+group:
+  hyperion_ambilight:
+    name: Woonkamer - Ambilight
+    entities:
+      - light.ambilight
+      - script.turn_ambilight_effect_on
+
+light:
+  - platform: hyperion
+    host: !secret HYPERION_IP_ADDRESS
+    name: Ambilight
+
+script:
+  turn_ambilight_effect_on:
+    alias: Woonkamer - Ambilight - Effect
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.ambilight
+          effect: "HDMI"
