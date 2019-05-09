@@ -1,0 +1,73 @@
+image_processing:
+  - platform: tensorflow
+    scan_interval: 10
+    source:
+      - entity_id: camera.wallpanel_kantoor_camera
+      - entity_id: camera.wallpanel_woonkamer_camera
+      - entity_id: camera.slaapkamer_elise
+      - entity_id: camera.slaapkamer_luuk
+    file_out:
+      - "/config/tmp/{{ camera_entity.split('.')[1] }}_latest.jpg"
+    model:
+      graph: /config/tensorflow/faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb
+      # categories:
+      #  - category: person
+
+automation:
+  - alias: "camera motion kantoor"
+    initial_state: true
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: binary_sensor.wallpanel_kantoor_beweging
+      to: 'on'
+    action:
+      service: image_processing.scan
+      entity_id: image_processing.tensorflow_wallpanel_kantoor_camera
+  - alias: "camera motion woonkamer"
+    initial_state: true
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: binary_sensor.wallpanel_woonkamer_beweging
+      to: 'on'
+    action:
+      service: image_processing.scan
+      entity_id: image_processing.tensorflow_wallpanel_woonkamer_camera
+  - alias: "camera motion slaapkamer elise"
+    initial_state: true
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: binary_sensor.slaapkamer_camera_elise_motion_detected
+      to: 'on'
+    action:
+      service: image_processing.scan
+      entity_id: camera.tensorflow_camera_elise
+  - alias: "camera motion slaapkamer luuk"
+    initial_state: true
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: binary_sensor.slaapkamer_camera_luuk_motion_detected
+      to: 'on'
+    action:
+      service: image_processing.scan
+      entity_id: camera.tensorflow_camera_luuk
+
+camera:
+  - platform: local_file
+    name: TensorFlow Wallpanel Kantoor Camera
+    file_path: "/config/tmp/wallpanel_kantoor_camera_latest.jpg"
+
+  - platform: local_file
+    name: TensorFlow Wallpanel Woonkamer Camera
+    file_path: "/config/tmp/wallpanel_woonkamer_camera_latest.jpg"
+
+  - platform: local_file
+    name: TensorFlow Camera Elise
+    file_path: "/config/tmp/slaapkamer_elise_latest.jpg"
+
+  - platform: local_file
+    name: TensorFlow Camera Luuk
+    file_path: "/config/tmp/slaapkamer_luuk_latest.jpg"

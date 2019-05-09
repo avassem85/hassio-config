@@ -20,6 +20,7 @@ www/zigbee2mqtt_networkmap/source.js
 .storage
 .cloud
 .google.token
+tmp
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
