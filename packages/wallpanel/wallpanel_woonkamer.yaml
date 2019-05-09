@@ -4,10 +4,7 @@ group:
     entities:
       - camera.wallpanel_woonkamer_camera
       - sensor.wallpanel_woonkamer_batterij
-      - sensor.wallpanel_woonkamer_temperatuur
       - sensor.wallpanel_woonkamer_licht
-      - sensor.wallpanel_woonkamer_magnetisch_veld
-      - sensor.wallpanel_woonkamer_luchtdruk
       - sensor.wallpanel_woonkamer_qr_code
       - binary_sensor.wallpanel_woonkamer_beweging
       - binary_sensor.wallpanel_woonkamer_gezicht
@@ -22,36 +19,18 @@ sensor:
     state_topic: "wallpanel/woonkamer/sensor/battery"
     name: "WallPanel - Woonkamer - Batterij"
     unit_of_measurement: "%"
-    value_template: ''
-
-  - platform: mqtt
-    state_topic: "wallpanel/woonkamer/sensor/temperature"
-    name: "WallPanel - Woonkamer - Temperatuur"
-    unit_of_measurement: "°C"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
 
   - platform: mqtt
     state_topic: "wallpanel/woonkamer/sensor/light"
     name: "WallPanel - Woonkamer - Licht"
     unit_of_measurement: "lx"
-    value_template: ''
-    
-  - platform: mqtt
-    state_topic: "wallpanel/woonkamer/sensor/magneticField"
-    name: "WallPanel - Woonkamer - Magnetisch veld"
-    unit_of_measurement: "uT"
-    value_template: ''
-
-  - platform: mqtt
-    state_topic: "wallpanel/woonkamer/sensor/pressure"
-    name: "WallPanel - Woonkamer - Luchtdruk"
-    unit_of_measurement: "hPa"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
     
   - platform: mqtt
     state_topic: "wallpanel/woonkamer/sensor/qrcode"
     name: "WallPanel - Woonkamer - QR Code"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
 
 binary_sensor:
   - platform: mqtt

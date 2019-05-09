@@ -4,10 +4,7 @@ group:
     entities:
       - camera.wallpanel_kantoor_camera
       - sensor.wallpanel_kantoor_batterij
-      - sensor.wallpanel_kantoor_temperatuur
       - sensor.wallpanel_kantoor_licht
-      - sensor.wallpanel_kantoor_magnetisch_veld
-      - sensor.wallpanel_kantoor_luchtdruk
       - sensor.wallpanel_kantoor_qr_code
       - binary_sensor.wallpanel_kantoor_beweging
       - binary_sensor.wallpanel_kantoor_gezicht
@@ -22,36 +19,18 @@ sensor:
     state_topic: "wallpanel/kantoor/sensor/battery"
     name: "WallPanel - Kantoor - Batterij"
     unit_of_measurement: "%"
-    value_template: ''
-
-  - platform: mqtt
-    state_topic: "wallpanel/kantoor/sensor/temperature"
-    name: "WallPanel - Kantoor - Temperatuur"
-    unit_of_measurement: "°C"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
 
   - platform: mqtt
     state_topic: "wallpanel/kantoor/sensor/light"
     name: "WallPanel - Kantoor - Licht"
     unit_of_measurement: "lx"
-    value_template: ''
-    
-  - platform: mqtt
-    state_topic: "wallpanel/kantoor/sensor/magneticField"
-    name: "WallPanel - Kantoor - Magnetisch veld"
-    unit_of_measurement: "uT"
-    value_template: ''
-
-  - platform: mqtt
-    state_topic: "wallpanel/kantoor/sensor/pressure"
-    name: "WallPanel - Kantoor - Luchtdruk"
-    unit_of_measurement: "hPa"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
     
   - platform: mqtt
     state_topic: "wallpanel/kantoor/sensor/qrcode"
     name: "WallPanel - Kantoor - QR Code"
-    value_template: ''
+    value_template: "{{ value_json.value }}"
 
 binary_sensor:
   - platform: mqtt
