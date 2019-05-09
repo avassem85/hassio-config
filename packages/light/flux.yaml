@@ -1,0 +1,33 @@
+switch:
+  - platform: flux
+    name: Flux Lights
+    lights:
+      - light.dimmer_stolplamp_level
+      - light.kantoor
+      - light.garderobe
+      - light.wc_beneden
+      - light.wc_boven
+      - light.gang_beneden
+      - light.gang_boven
+    start_time: '21:30'
+    stop_time: '6:00'
+    start_colortemp: 4000
+    sunset_colortemp: 3000
+    stop_colortemp: 1900
+    brightness: 200
+    disable_brightness_adjust: true
+    mode: xy
+    transition: 30
+    interval: 60
+
+automation:
+  - alias: enable flux lights on platform start
+    initial_state: true
+    hide_entity: true
+    trigger:
+    - event: start
+      platform: homeassistant
+    action:
+    - data:
+        entity_id: switch.flux_lights
+      service: switch.turn_on
