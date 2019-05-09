@@ -1,0 +1,19 @@
+homeassistant:
+  customize_glob:
+    light.anavi_light_controller_3d_printer:
+      friendly_name: "Snapmaker - Ledverlichting"
+
+group:
+  anavi_light_controller:
+    name: ANAVI Light Controller
+    entities:
+      - light.anavi_light_controller_3d_printer
+
+light:
+  - platform: mqtt
+    schema: json
+    name: "ANAVI Light Controller 3D Printer"
+    command_topic: "cmnd/f6f4a05ea40a4149bd2636bfe651b70/color"
+    state_topic: "stat/f6f4a05ea40a4149bd2636bfe651b70/color"
+    brightness: true
+    rgb: true
